@@ -1,0 +1,62 @@
+# Ignore build results
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache and settings
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Compiled binaries
+*.exe
+*.dll
+*.pdb
+*.cache
+*.ilk
+*.idb
+
+# Debug / Release configurations
+Debug/
+Release/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# Other generated files
+*.log
+*.vspscc
+*_i.c
+*_p.c
+*.ipch
+*.aps
+*.ncb
+*.opendb
+*.dbmdl
+*.jfm
+*.tlog
+
+# NuGet (in case you add packages later)
+*.nupkg
+*.nuget.props
+*.nuget.targets
+packages/
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Windows crash dumps
+*.dmp
+
+# Temporary files
+*.tmp
+*.temp
+~$*
