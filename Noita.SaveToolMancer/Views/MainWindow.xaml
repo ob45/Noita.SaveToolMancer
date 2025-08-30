@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Noita.SaveToolMancer.Views"
         mc:Ignorable="d"
         Icon="/Assets/favicon.ico"
-        Title="Noita SaveToolMancer" Height="256" Width="640">
+        Title="Noita SaveToolMancer" Height="256" Width="640" ResizeMode="CanMinimize">
     <Grid>
         <StackPanel Orientation="Horizontal"
                 HorizontalAlignment="Center"
@@ -18,9 +18,8 @@
                            Width="20" Height="20" Margin="0,0,2,0"/>
                     <Image Source="/Assets/floppy_disk.ico"
                            Width="20" Height="20" Margin="0,0,2,0"/>
-                    <TextBlock Text="Restore SaveGame" VerticalAlignment="Center"/>
+                    <TextBlock Text="Backup SaveGame" VerticalAlignment="Center"/>
                 </StackPanel>
-
             </Button>
             <!-- Right margin 30 -->
             <Button x:Name="btn_restoreSave" Width="154" Height="84" Margin="30,0,0,0" Click="btn_restoreSave_Click">
