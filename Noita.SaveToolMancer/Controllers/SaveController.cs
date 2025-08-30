@@ -10,9 +10,9 @@ namespace Noita.SaveToolMancer.Controllers
             return SaveHelper.CopySaveGame();
         }
 
-        internal static void RestoreSaveGame()
+        internal static KeyValuePair<bool, string> RestoreSaveGame()
         {
-
+            return SaveHelper.RestoreSaveGame();
         }
 
     }

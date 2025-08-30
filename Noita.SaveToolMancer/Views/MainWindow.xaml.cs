@@ -22,7 +22,8 @@ namespace Noita.SaveToolMancer.Views
 
         private void btn_restoreSave_Click(object sender, RoutedEventArgs e)
         {
-            SaveController.RestoreSaveGame();
+            KeyValuePair<bool, string> result = SaveController.RestoreSaveGame();
+            PresentOpResult(result);
         }
 
         private void btn_openGameFolder_Click(object sender, RoutedEventArgs e)
@@ -44,7 +45,7 @@ namespace Noita.SaveToolMancer.Views
             else // failure
             {
                 MessageBox.Show(
-                    opResult.Value,                 // message text
+                    opResult.Value,                 
                     "Error",
                     MessageBoxButton.OK,
                     MessageBoxImage.Error

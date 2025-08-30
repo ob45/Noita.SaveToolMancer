@@ -61,7 +61,33 @@ namespace Noita.SaveToolMancer.Helpers
 
         internal static KeyValuePair<bool, string> RestoreSaveGame()
         {
-            return new KeyValuePair<bool, string>(false, "error");
+            try
+            {
+                string userName = Environment.UserName;
+                string noitaPath = $@"C:\Users\{userName}\AppData\LocalLow\Nolla_Games_Noita";
+                string savePath = Path.Combine(noitaPath, Statics.DefaultSaveName);
+                string backupPath = Path.Combine(noitaPath, Statics.DefaultSaveName + "-Backup");
+
+                if (!Directory.Exists(backupPath))
+                {
+                    return new KeyValuePair<bool, string>(false, "Backup folder not found.");
+                }
+
+                // Delete existing (current) save00 if it exists
+                if (Directory.Exists(savePath))
+                {
+                    Directory.Delete(savePath, true);
+                }
+
+                // Restore save00 from backup
+                CopyDirectory(backupPath, savePath);
+
+                return new KeyValuePair<bool, string>(true, "Save restored successfully.");
+            }
+            catch (Exception ex)
+            {
+                return new KeyValuePair<bool, string>(false, $"Error: {ex.Message}");
+            }
         }
 
     }
