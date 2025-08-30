@@ -1,16 +1,6 @@
-﻿using System;
+﻿using Noita.SaveToolMancer.Controllers;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Noita.SaveToolMancer.Views
 {
@@ -26,17 +16,40 @@ namespace Noita.SaveToolMancer.Views
 
         private void btn_saveGame_Click(object sender, RoutedEventArgs e)
         {
-
+            KeyValuePair<bool, string> result = SaveController.BackupSaveGame();
+            PresentOpResult(result);
         }
 
         private void btn_restoreSave_Click(object sender, RoutedEventArgs e)
         {
-
+            SaveController.RestoreSaveGame();
         }
 
         private void btn_openGameFolder_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void PresentOpResult(KeyValuePair<bool, string> opResult)
+        {
+            if (opResult.Key) // success
+            {
+                MessageBox.Show(
+                    opResult.Value,                 // message text
+                    "Success",                      // caption
+                    MessageBoxButton.OK,           // buttons
+                    MessageBoxImage.Information      // icon
+                );
+            }
+            else // failure
+            {
+                MessageBox.Show(
+                    opResult.Value,                 // message text
+                    "Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error
+                );
+            }
         }
     }
 }
