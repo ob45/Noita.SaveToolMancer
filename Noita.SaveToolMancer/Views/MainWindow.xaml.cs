@@ -28,7 +28,12 @@ namespace Noita.SaveToolMancer.Views
 
         private void btn_openGameFolder_Click(object sender, RoutedEventArgs e)
         {
+            KeyValuePair<bool, string> result = SaveController.OpenGameFolder();
 
+            if (!result.Key)
+            {
+                PresentOpResult(result);
+            }
         }
 
         private void PresentOpResult(KeyValuePair<bool, string> opResult)
