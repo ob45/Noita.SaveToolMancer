@@ -114,5 +114,8 @@
     <Resource Include="Assets\file_folder.ico" />
     <Resource Include="Assets\floppy_disk.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\recycle.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
