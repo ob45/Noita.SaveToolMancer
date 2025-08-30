@@ -11,7 +11,7 @@ This tool solves the problem: you can **save and restore your progress** outside
 
 ## Features
 
-![Main window screenshot](Assets/UI_basic.png)
+![Main window screenshot](assets/UI_basic.png)
 
 ### ⏫💾 Backup Savegame
 - Creates a copy of your current `save00` folder.
