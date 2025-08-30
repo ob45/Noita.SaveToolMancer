@@ -5,23 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Noita.SaveToolMancer.Views"
         mc:Ignorable="d"
-        Title="SaveToolMancer" Height="256" Width="640">
+        Icon="/Assets/favicon.ico"
+        Title="Noita SaveToolMancer" Height="256" Width="640">
     <Grid>
         <StackPanel Orientation="Horizontal"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="0">
-            <Button x:Name="btn_saveGame" Content="🔼💾 Backup SaveGame"
-        Width="154" Height="84"
-        Margin="0,0,0,0" Click="btn_saveGame_Click"/>
+            <Button x:Name="btn_saveGame" Width="154" Height="84" Margin="0,0,0,0" Click="btn_saveGame_Click">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Image Source="/Assets/arrow_double_up.ico"
+                           Width="20" Height="20" Margin="0,0,2,0"/>
+                    <Image Source="/Assets/floppy_disk.ico"
+                           Width="20" Height="20" Margin="0,0,2,0"/>
+                    <TextBlock Text="Restore SaveGame" VerticalAlignment="Center"/>
+                </StackPanel>
+
+            </Button>
             <!-- Right margin 30 -->
-            <Button x:Name="btn_restoreSave" Content="🔽💾 Restore SaveGame"
-        Width="154" Height="84"
-        Margin="30,0,0,0" Click="btn_restoreSave_Click"/>
-            <!-- Left margin 30 -->
-            <Button x:Name="btn_openGameFolder" Content="📂 Open Save Folder"
-        Width="154" Height="84"
-        Margin="30,0,0,0" Click="btn_openGameFolder_Click"/>
+            <Button x:Name="btn_restoreSave" Width="154" Height="84" Margin="30,0,0,0" Click="btn_restoreSave_Click">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Image Source="/Assets/arrow_double_up.ico"
+                           Width="20" Height="20" Margin="0,0,2,0"/>
+                    <Image Source="/Assets/floppy_disk.ico"
+                           Width="20" Height="20" Margin="0,0,2,0"/>
+                    <TextBlock Text="Restore SaveGame" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+                <!-- Left margin 30 -->
+            <Button x:Name="btn_openGameFolder" Width="154" Height="84" Margin="30,0,0,0" Click="btn_openGameFolder_Click">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Image Source="/Assets/file_folder.ico"
+                           Width="20" Height="20" Margin="0,0,8,0"/>
+                    <TextBlock Text="Open Save Folder" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
             <!-- Left margin 30 -->
         </StackPanel>
     </Grid>
