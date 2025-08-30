@@ -9,6 +9,13 @@ This tool solves the problem: you can **save and restore your progress** outside
 
 ---
 
+## ⏬ Download
+Grab the latest compiled version here:
+
+➡️ [Download Noita Save Tool Mancer v1.0.0](https://github.com/ob45/Noita.SaveToolMancer/releases/latest)
+
+After downloading, just run `Noita.SaveToolMancer.exe`. No installation required.
+
 ## Features
 
 ![Main window screenshot](assets/UI_basic.png)
