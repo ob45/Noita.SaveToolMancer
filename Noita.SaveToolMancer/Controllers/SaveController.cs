@@ -1,4 +1,5 @@
-﻿using Noita.SaveToolMancer.Helpers;
+﻿using Noita.SaveToolMancer.Config;
+using Noita.SaveToolMancer.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,11 +11,20 @@ namespace Noita.SaveToolMancer.Controllers
     {
         internal static KeyValuePair<bool, string> BackupSaveGame()
         {
+            if (IsNoitaRunning())
+            {
+                return new KeyValuePair<bool, string>(false,"Quit Noita to save the game first!");
+            }
             return SaveHelper.CopySaveGame();
         }
 
         internal static KeyValuePair<bool, string> RestoreSaveGame()
         {
+            if (IsNoitaRunning())
+            {
+                return new KeyValuePair<bool, string>(false, "Quit Noita to restore a game save!");
+            }
+
             return SaveHelper.RestoreSaveGame();
         }
 
@@ -36,5 +46,25 @@ namespace Noita.SaveToolMancer.Controllers
             return new KeyValuePair<bool, string> (true, string.Empty);
         }
 
+        internal static bool IsNoitaRunning()
+        {
+            bool isRunning = IsProcessRunning(Statics.GameProcess);
+            bool isDevRunning = IsProcessRunning(Statics.DevGameProcess);
+
+            if (isRunning || isDevRunning)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        static bool IsProcessRunning(string processName)
+        {
+            Process[] processes = Process.GetProcessesByName(processName);
+            return processes.Length > 0;
+        }
     }
+
+    
 }
