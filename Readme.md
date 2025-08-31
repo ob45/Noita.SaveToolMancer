@@ -1,4 +1,11 @@
+<p align="center">
+  <img src="https://repository-images.githubusercontent.com/1047562372/ef3057a1-9c6a-450b-a8b3-824ce52ea39e" alt="Project Logo" width="200"/>
+</p>
+
 # Noita Save Tool
+
+
+
 
 A small C# WPF utility to manage **save backups** for [Noita](https://store.steampowered.com/app/881100/Noita/).
 
@@ -12,7 +19,7 @@ This tool solves the problem: you can **save and restore your progress** outside
 ## ⏬ Download
 Grab the latest compiled version here:
 
-➡️ [Download Noita Save Tool Mancer v1.0.0](https://github.com/ob45/Noita.SaveToolMancer/releases/latest)
+➡️ [Download latest version of Noita Save Tool Mancer here](https://github.com/ob45/Noita.SaveToolMancer/releases/latest)
 
 After downloading, just run `Noita.SaveToolMancer.exe`. No installation required.
 
