@@ -14,9 +14,9 @@
                 Margin="0">
             <Button x:Name="btn_saveGame" Width="154" Height="84" Margin="0,0,0,0" ToolTip="Creates a copy of your current save file" Click="btn_saveGame_Click">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <Image Source="/Assets/arrow_double_up.ico"
+                    <Image Source="/Assets/sparkles.ico"
                            Width="20" Height="20" Margin="0,0,2,0"/>
-                    <Image Source="/Assets/floppy_disk.ico"
+                    <Image Source="/Assets/mage.ico"
                            Width="20" Height="20" Margin="0,0,2,0"/>
                     <TextBlock Text="Backup SaveGame" VerticalAlignment="Center"/>
                 </StackPanel>
@@ -24,9 +24,9 @@
             <!-- Right margin 30 -->
             <Button x:Name="btn_restoreSave" Width="154" Height="84" Margin="30,0,0,0"  ToolTip="Restores a previous copy of your save file" Click="btn_restoreSave_Click">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <Image Source="/Assets/recycle.ico"
+                    <Image Source="/Assets/crystal_ball.ico"
                            Width="20" Height="20" Margin="0,0,2,0"/>
-                    <Image Source="/Assets/floppy_disk.ico"
+                    <Image Source="/Assets/mage_red.ico"
                            Width="20" Height="20" Margin="0,0,2,0"/>
                     <TextBlock Text="Restore SaveGame" VerticalAlignment="Center"/>
                 </StackPanel>
@@ -34,9 +34,11 @@
                 <!-- Left margin 30 -->
             <Button x:Name="btn_openGameFolder" Width="154" Height="84" Margin="30,0,0,0" ToolTip="Opens the saves folder of Noita" Click="btn_openGameFolder_Click">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Image Source="/Assets/cyclone.ico"
+                           Width="20" Height="20" Margin="0,0,2,0"/>
                     <Image Source="/Assets/file_folder.ico"
-                           Width="20" Height="20" Margin="0,0,8,0"/>
-                    <TextBlock Text="Open Save Folder" VerticalAlignment="Center"/>
+                           Width="20" Height="20" Margin="0,0,2,0"/>
+                    <TextBlock Text="Open Saves Folder" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>
             <!-- Left margin 30 -->

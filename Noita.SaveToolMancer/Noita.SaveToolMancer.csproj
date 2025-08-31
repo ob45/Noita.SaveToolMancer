@@ -117,5 +117,15 @@
   <ItemGroup>
     <Resource Include="Assets\recycle.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\crystal_ball.ico" />
+    <Resource Include="Assets\cyclone.ico" />
+    <Resource Include="Assets\dizzy.ico" />
+    <Resource Include="Assets\mage.ico" />
+    <Resource Include="Assets\sparkles.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\mage_red.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
